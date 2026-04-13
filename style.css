@@ -1,9 +1,12 @@
+/* Resetting of the browsers values, 
+so that everything looks the same on every browser */
 * {
     margin: 0;
     padding: 50;
     box-sizing: border-box;
 }
 
+/* Body-everything the user sees */
 body {
     background-color: #000000;
     color: #e8e4dc;
@@ -15,4 +18,80 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 24px 40 px;
+}
+
+/* The positioning of the elements */
+nav span {
+    font-size: 15px;
+    letter-spacing: 0.12em;
+}
+
+nav a {
+    color: rgba(232, 228, 220, 0.5);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+}
+
+/* Targets the elements with class="hero" */
+.hero {
+    padding: 80px 40px;
+}
+
+.hero .tag{
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: #c9a96e;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+/* The emphasized parts look */
+hero em {
+    font-style: italic;
+    color: #c9a96e;
+}
+
+/* about */
+.about {
+    padding: 60px 40px;
+}
+
+.about p {
+    font-size: 24px;
+    color: rgba(232, 228, 220, 0.6);
+    line-height: 1.8;
+}
+
+/* Contact */
+
+.contact {
+    padding: 60px, 40px;
+}
+
+.contact a {
+    font-size: 14px;
+    color: rgba(232, 228, 220, 0.6);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    border: 0.5px solid rgba(232, 228, 220, 0.2);
+    padding: 10px 20px;
+}
+
+/* Footer */
+footer {
+    padding: 24 px 40px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    font-size: 12px;
+    color: rgba(232, 228, 220, 0.25);
 }
