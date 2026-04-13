@@ -1,3 +1,11 @@
+/* Font settings */
+.inter <stuff> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style : normal;
+}
+
 /* Resetting of the browsers values, 
 so that everything looks the same on every browser */
 * {
@@ -10,14 +18,15 @@ so that everything looks the same on every browser */
 body {
     background-color: #000000;
     color: #e8e4dc;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40 px;
+    padding: 24px 40px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) ;
 }
 
 /* The positioning of the elements */
@@ -27,11 +36,19 @@ nav span {
 }
 
 nav a {
-    color: rgba(232, 228, 220, 0.5);
+    color: rgba(232, 228, 220, 0.6);
     text-decoration: none;
     font-size: 13px;
     letter-spacing: 0.06em;
+    transition: color 0.2s ease;
 }
+
+/* Hover effect when the mouse is above the navigation tiles */
+nav a:hover {
+   color: #e8e4dc; 
+}
+
+
 
 /* Targets the elements with class="hero" */
 .hero {
@@ -87,7 +104,7 @@ hero em {
 
 /* Footer */
 footer {
-    padding: 24 px 40px;
+    padding: 24px 40px;
     border-top: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -95,3 +112,4 @@ footer p {
     font-size: 12px;
     color: rgba(232, 228, 220, 0.25);
 }
+
