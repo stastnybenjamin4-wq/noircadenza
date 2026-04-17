@@ -63,7 +63,7 @@ nav a:hover {
 }
 
 /* The emphasized parts look */
-hero em {
+.hero em {
     font-style: italic;
     color: #c9a96e;
 }
