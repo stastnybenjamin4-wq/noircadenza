@@ -66,6 +66,7 @@ nav a:hover {
 .hero em {
     font-style: italic;
     color: #c9a96e;
+    transition: opacity 1s ease;
 }
 
 /* about */
