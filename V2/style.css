@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- HEADER & HAMBURGER --- */
+/* --- FIXED HEADER & HAMBURGER MENU --- */
 header {
     position: fixed;
     top: 0;
@@ -22,9 +22,60 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100; /* Keeps header above everything */
+    z-index: 100;
 }
 
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* Updated Menu Button Container */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 24px; /* Slightly taller for better spacing */
+    z-index: 101; 
+}
+
+/* Individual lines stacked perfectly */
+.bar {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #f5f5f7;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out; /* Smooth transition speed */
+}
+
+/* Standard 3-line positioning */
+.bar:nth-child(1) { top: 2px; }
+.bar:nth-child(2) { top: 11px; }
+.bar:nth-child(3) { top: 20px; }
+
+/* Perfect Symmetrical 'X' Animation */
+.menu-btn.active .bar:nth-child(1) {
+    top: 11px;
+    transform: rotate(135deg);
+}
+
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+    left: -20px; /* Slides out subtly to the left */
+}
+
+.menu-btn.active .bar:nth-child(3) {
+    top: 11px;
+    transform: rotate(-135deg);
+}
 .logo {
     font-weight: 700;
     font-size: 1.2rem;
