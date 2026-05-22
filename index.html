@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <!-- This is the google font Inter -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>noircadenze</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!-- This is the Font Awesome CSS library -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
 </head>
-
 <body>
-    <nav>
-        <span>noircadenza</span>
-        <div>
-            <a href="#hero">music</a>
-            <a href="#about">about</a>
-            <a href="#contact">contact</a>
-        </div>
+
+    <header>
+        <div class="logo">YOUR NAME.</div>
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <nav class="overlay-menu" id="overlayMenu">
+        <ul class="menu-links">
+            <li><a href="#musician" onclick="toggleMenu()">Musician</a></li>
+            <li><a href="#programmer" onclick="toggleMenu()">Programmer</a></li>
+            <li><a href="#photographer" onclick="toggleMenu()">Photographer</a></li>
+            <li><a href="#student" onclick="toggleMenu()">Student</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About & Contact</a></li>
+        </ul>
     </nav>
 
-    <main>
-        <section class="hero" id="hero">
-            <p class="tag">Trumpet • Guitar • Jazz</p>
-            <h1>Sound shaped by <em>creativity</em></h1>
-        </section>
+    <main class="hero-section">
+        <div class="hero-intro">
+            <p class="subtitle">CREATIVE PORTFOLIO</p>
+            <h1 class="main-title">
+                Building code. <br>
+                Capturing moments. <br>
+                Creating sound.
+            </h1>
+        </div>
 
-        <section class="Quote" id="Quote">
-            <p>Still learning. Always creating.</p>
-            <p>Where engineering meets improvisation.</p>
-        </section>
-
-        <section class="Introduction" id="Introduction">
-            <p></p>
-        </section>
-
-        <section class="music" id="music">
-            <a href="https://www.instagram.com/noircadenza" class="social-link">
-                <i class="fa-brands fa-instagram"></i> 
-            </a>
-
-            <a href="https://youtube.com/@noircadenza?si=_zPsSOjwJSwzek4U" class="social-link">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
+        <section class="expertise-grid">
+            <div class="grid-item">
+                <span class="num">01</span>
+                <h3>Programmer</h3>
+                <p>Clean code, web development, and problem solving.</p>
+            </div>
+            <div class="grid-item">
+                <span class="num">02</span>
+                <h3>Musician</h3>
+                <p>Sound design, composition, and audio production.</p>
+            </div>
+            <div class="grid-item">
+                <span class="num">03</span>
+                <h3>Photographer</h3>
+                <p>Visual storytelling through a minimalist lens.</p>
+            </div>
+            <div class="grid-item">
+                <span class="num">04</span>
+                <h3>Student</h3>
+                <p>Constantly learning, researching, and evolving.</p>
+            </div>
         </section>
     </main>
 
-
-<footer id="footer">
-    <p>© 2026 noircadenza</p>
-    <p>Powered by Benjamin Šťastný</p>
-    <p>Poland</p>
-</footer>
-
-<!--This is the link to the animations json file,
-it is at the end because else the animation tries 
-to run before the elements exist-->
-<script src="script.js"></script>
-
+    <script>
+        function toggleMenu() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const overlayMenu = document.getElementById('overlayMenu');
+            
+            // Toggle the 'active' class on both the button and the menu
+            menuBtn.classList.toggle('active');
+            overlayMenu.classList.toggle('active');
+        }
+    </script>
 </body>
-
-
 </html>

@@ -1,149 +1,174 @@
-/* Resetting of the browsers values, 
-so that everything looks the same on every browser */
+/* --- RESET & BASE STYLES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
-/* Body-everything the user sees */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color:#e8e4dc;
-    background-color: black;
-    /*background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/TestBackground2.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0a0a0a; /* Modern Deep Dark Background */
+    color: #f5f5f7; /* Soft Off-White for text (easier on eyes than pure white) */
+    overflow-x: hidden;
 }
 
-nav {
+/* --- HEADER & HAMBURGER --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40px;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3) ;
+    z-index: 100; /* Keeps header above everything */
 }
 
-/* The positioning of the elements */
-nav span {
-    font-size: 15px;
-    letter-spacing: 0.12em;
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 
-nav a {
-    color: rgba(250, 250, 249, 0.6);
+/* Hamburger Button */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    z-index: 101; /* Stays above overlay */
+}
+
+.bar {
+    width: 100%;
+    height: 20px;
+    border-bottom: 2px solid #f5f5f7;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger to 'X' Animation */
+.menu-btn.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.menu-btn.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-btn.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* --- FULLSCREEN OVERLAY MENU --- */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #121212; /* Slightly different dark shade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 99;
+}
+
+.overlay-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-links {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-links li {
+    margin: 25px 0;
+}
+
+.menu-links a {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #f5f5f7;
     text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 0.06em;
-    transition: color 0.2s ease;
+    letter-spacing: 1px;
+    transition: color 0.3s, padding-left 0.3s;
 }
 
-/* Hover effect when the mouse is above the navigation tiles */
-nav a:hover {
-    color:#e8e4dc;
+/* Subtle modern interaction instead of flashing colors */
+.menu-links a:hover {
+    color: #8e8e93; /* Subtle gray highlight */
+    padding-left: 10px;
 }
 
-
-
-/* Targets the elements with class="hero" */
-.hero {
-    padding: 80px 40px;
+/* --- MAIN HERO CONTENT --- */
+.hero-section {
+    padding: 160px 40px 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.hero .tag{
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    color: #c9a96e;
+.subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: #8e8e93;
     margin-bottom: 20px;
-    text-transform: uppercase;
 }
 
-.hero h1 {
-    font-size: 52px;
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 80px;
+    letter-spacing: -1px;
 }
 
-/* The emphasized parts look */
-.hero em {
-    font-style: italic;
-    color: #c9a96e;
-    transition: opacity 1s ease;
+/* --- EXPERTISE GRID (Akaru Inspired) --- */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    border-top: 1px solid #2c2c2e;
+    padding-top: 40px;
 }
 
-/* about */
-.Quote {
-    padding: 60px 40px;
-}
-
-.Quote p {
-    font-size: 24px;
-    color: rgba(232, 228, 220, 0.6);
-    line-height: 1.8;
-}
-
-/* Contact */
-
-.music {
+.grid-item {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 60px 40px;
-    
+    flex-direction: column;
 }
 
-.music a {
-    font-size: 40px;
-    color: rgba(232, 228, 220, 0.6);
-    text-decoration: none;
-    letter-spacing: normal;
-    padding: 5px 5px;
-    transition: color 0.2s ease;
+.grid-item .num {
+    font-size: 0.8rem;
+    color: #636366;
+    margin-bottom: 15px;
+    font-family: monospace;
 }
 
-.music a:hover {
-    color:#e8e4dc;
+.grid-item h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
-
-/* Footer */
-footer {
-    padding: 24px 40px;
-    border-top: 0.5px solid rgba(255, 255, 255, 0.3);
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.grid-item p {
+    color: #a1a1a6;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-footer p {
-    font-size: 12px;
-    color: rgba(232, 228, 220, 0.25);
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 40px;
+    .main-title {
+        font-size: 2.5rem;
     }
-    .hero {
-        padding: 40px 24px;
+    .menu-links a {
+        font-size: 2rem;
     }
-    .Quote {
-        padding: 30px 24px;
-        font-size: 22px;
-    }
-    .music {
-        padding: 30px 24px;
-    }
-
-
-}
-
-main {
-    flex: 1;
 }

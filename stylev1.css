@@ -1,0 +1,145 @@
+/* Resetting of the browsers values, 
+so that everything looks the same on every browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body-everything the user sees */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color:#e8e4dc;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3) ;
+}
+
+/* The positioning of the elements */
+nav span {
+    font-size: 15px;
+    letter-spacing: 0.12em;
+}
+
+nav a {
+    color: rgba(250, 250, 249, 0.6);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    transition: color 0.2s ease;
+}
+
+/* Hover effect when the mouse is above the navigation tiles */
+nav a:hover {
+    color:#e8e4dc;
+}
+
+
+
+/* Targets the elements with class="hero" */
+.hero {
+    padding: 80px 40px;
+}
+
+.hero .tag{
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: #c9a96e;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+/* The emphasized parts look */
+.hero em {
+    font-style: italic;
+    color: #c9a96e;
+    transition: opacity 1s ease;
+}
+
+/* about */
+.Quote {
+    padding: 60px 40px;
+}
+
+.Quote p {
+    font-size: 24px;
+    color: rgba(232, 228, 220, 0.6);
+    line-height: 1.8;
+}
+
+/* Contact */
+
+.music {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px 40px;
+    
+}
+
+.music a {
+    font-size: 40px;
+    color: rgba(232, 228, 220, 0.6);
+    text-decoration: none;
+    letter-spacing: normal;
+    padding: 5px 5px;
+    transition: color 0.2s ease;
+}
+
+.music a:hover {
+    color:#e8e4dc;
+}
+
+
+/* Footer */
+footer {
+    padding: 24px 40px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    font-size: 12px;
+    color: rgba(232, 228, 220, 0.25);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero {
+        padding: 40px 24px;
+    }
+    .Quote {
+        padding: 30px 24px;
+        font-size: 22px;
+    }
+    .music {
+        padding: 30px 24px;
+    }
+
+
+}
+
+main {
+    flex: 1;
+}
