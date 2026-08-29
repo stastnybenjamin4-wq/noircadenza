@@ -157,7 +157,7 @@ header {
         text-shadow: 5px 5px 0 #ff0000, 10px 10px 0 #e0bbd5;
     }
     50% {
-        text-shadow: 5px 5px 0 #00d4ff, 10px 10px 0 #ff0000;
+        text-shadow: -5px -5px 0 #00d4ff, 10px 10px 0 #ff0000;
     }
 }
 
