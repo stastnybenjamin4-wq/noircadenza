@@ -218,7 +218,7 @@ header {
     background-size: cover;
     background-position: center;
 
-    animation: kenburns-bottom 5s ease-out both infinite alternate;
+    animation: kenburns-bottom 5s ease-out forwards;
 }
 @keyframes kenburns-bottom {
   0% {
