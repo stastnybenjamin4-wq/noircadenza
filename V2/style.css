@@ -150,7 +150,7 @@ header {
 
 .hero-section .main-title {
      text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
-    animation: shadow-dance 4s infinite;
+    animation: shadow-dance 4s infinite alternate;
 }
 @keyframes shadow-dance {
     0%, 100% {
