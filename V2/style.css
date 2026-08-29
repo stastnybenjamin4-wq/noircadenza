@@ -151,7 +151,7 @@ header {
 
 
 .logo {
-	animation: logo-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: logo-focus-in 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 @keyframes logo-focus-in {
