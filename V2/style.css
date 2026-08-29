@@ -40,7 +40,7 @@ header {
 }
 
 .menu-links a {
-    font-size: 2.5rem;
+    font-size: 40px;
     font-weight: 300;
     color: #f5f5f7;
     text-decoration: none;
@@ -48,18 +48,59 @@ header {
     transition: color 0.3s, padding-left 0.3s;
 }
 
-/* Subtle modern interaction instead of flashing colors */
-.menu-links a:hover {
-    color: #8e8e93; /* Subtle gray highlight */
-    padding-left: 10px;
-}
-
 /* --- MAIN HERO CONTENT --- */
 .hero-section {
-    padding: 160px 40px 80px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}  
+/* --- HERO INTRO --- */
+.inner-headings {
+    border: 0px solid transparent;
+    height: 70px;
+    line-height: 70px;
+    overflow: hidden;
 }
+
+.inner-headings span {
+    position:relative;
+    color: #f5f5f7;
+    animation: animation 10s
+    ease infinite;
+}
+@keyframes animation {
+    0%, 
+    100% {
+      top: 0; 
+    }
+    20% {
+      top: 0px; 
+    }
+    25% {
+      top: -75px; 
+    }
+    45% {
+      top: -75px; 
+    }
+    50% {
+      top: -150px; 
+    }
+    70% {
+      top: -150px; 
+    }
+    75% {
+      top: -225px; 
+    }
+    95% {
+      top: -225px; 
+    }
+}
+
+
+
 
 .subtitle {
     font-size: 0.8rem;
@@ -101,19 +142,16 @@ header {
 }
 
 
-
 /* Container alignment below hero title */
 .links {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap:16px;
 }
-
 .links a {
   display: inline-flex;
   text-decoration: none;
 }
-
 
 
 /* Base icon styling */
@@ -129,38 +167,55 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+
 /* Hover bounce effect */
 .icons-social-media:hover {
   transform: translateY(-6px);
   fill: #ffffff;
 }
 
+
 /* Official Brand Hover Colors */
 #instagram:hover {
   background: #e1306c; /* Official Instagram Pink */
 }
-
 #facebook:hover {
   background: #1877f2; /* Official Facebook Blue */
 }
-
 #youtube:hover {
   background: #ff0000; /* Official YouTube Red */
 }
 
 
-
+/* --- ANIMATIONS --- */
 .logo {
-	animation: logo-focus-in 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: focus-in-expand-fwd 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-@keyframes logo-focus-in {
+@keyframes focus-in-expand-fwd {
   0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-100px);
     filter: blur(12px);
     opacity: 0;
   }
   100% {
-    filter: blur(0px);
+    transform: translateZ(0);
+    filter: blur(0);
     opacity: 1;
+  }
+}
+
+
+.background {
+	animation: kenburns-bottom 5s ease-out both;
+}
+@keyframes background {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 84%;
+  }
+  100% {
+    transform: scale(1.25) translateY(15px);
+    transform-origin: bottom;
   }
 }
