@@ -59,12 +59,6 @@ header {
     padding: 160px 40px 80px 40px;
     max-width: 1200px;
     margin: 0 auto;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-    @keyframes shadow-dance {
-        0%, 100% { text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
-        50% { text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); }
-    }
-    animation: shadow-dance 2s ease-in-out infinite;
 }
 
 .subtitle {
@@ -154,5 +148,16 @@ header {
   background: #ff0000; /* Official YouTube Red */
 }
 
-
+.logo {
+     text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    animation: shadow-dance 2s infinite;
+}
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e;
+    }
+}
 
