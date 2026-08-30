@@ -162,16 +162,15 @@ header {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   fill: #f5f5f7; /* White icon glyph */
-  background-color: #1c1c1e; /* Apple-style subtle dark circle */
+  backdrop-filter: blur(8px);  /* Apple-style frosted glass */
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 
 /* Hover bounce effect */
 .icons-social-media:hover {
   transform: translateY(-6px);
-  fill: #ffffff;
+  fill: #f5f5f7; /* Keep the icon white on hover */
 }
 
 
