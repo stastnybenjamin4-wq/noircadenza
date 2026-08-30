@@ -212,3 +212,22 @@ header {
     transform-origin: bottom;
   }
 }
+
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  
+}
+
+.footer-text {
+  display: inline-block;
+  backdrop-filter: blur(8px);           /* Optional: Frosted glass effect */
+  border-radius: 50px;                   /* Makes the edges fully rounded */
+  padding: 5px 15px;                    /* Gives breathing room inside the capsule */
+  margin: 0;
+}
