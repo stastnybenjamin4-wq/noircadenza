@@ -104,9 +104,9 @@ header {
 
 .subtitle {
     font-size: 0.8rem;
-    letter-spacing: 4px;
-    color: #8e8e93;
-    margin-bottom: 20px;
+    letter-spacing: 6px;
+    color: whitesmoke;
+    margin-bottom: 20px; 
 }
 
 .main-title {
